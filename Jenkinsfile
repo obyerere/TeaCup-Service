@@ -49,8 +49,12 @@ node {
 
 
      stage('Prepare Package'){
-         withMaven(maven: 'Maven'){
+         try {
+        withMaven(maven: 'Maven'){
             sh 'mvn package'
-        }
+        } 
+        } finally {
+            archiveArtifacts 'target/*.jar'
+    }
     }
 }
