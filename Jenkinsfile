@@ -20,6 +20,11 @@ node {
             sh 'mvn test'
         }
     }
+    post { 
+        always { 
+            junit 'target/surefire-reports/TEST-com.grokonez.jwtauthentication.TestBootUp.xml'
+        }
+    }
     
     
      stage('Test Package'){
