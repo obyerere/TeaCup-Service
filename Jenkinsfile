@@ -16,9 +16,14 @@ node {
     }
     
     stage('Test Code'){
-         withMaven(maven: 'Maven'){
+       
+    try {
+        withMaven(maven: 'Maven'){
             sh 'mvn test'
-        }
+        } 
+        } finally {
+            junit 'target/surefire-reports/TEST-com.grokonez.jwtauthentication.TestBootUp.xml'
+    }
     }
 
      stage('Test Package'){
