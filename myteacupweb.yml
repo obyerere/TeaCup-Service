@@ -1,0 +1,59 @@
+sudo rm key.json
+sudo rm myteacupweb.yml
+
+sudo cat <<EOF >> key.json
+ 
+#insert key.son
+
+EOF
+
+sudo ls -la 
+sudo gcloud auth activate-service-account \
+  obyerere@turnkey-mender-271118.iam.gserviceaccount.com \
+          --key-file=key.json --project=turnkey-mender-271118
+
+sudo gcloud container clusters get-credentials  teacup-k8s	--zone us-east1-d
+sudo cat <<EOF >>myteacupweb.yml
+apiVersion: apps/v1          
+kind: Deployment             
+metadata:
+  name: teacup-web-server   
+  labels:                    
+    app: teacup-web-server
+spec:
+  replicas: 1                
+  selector:
+    matchLabels:             
+      app: teacup-web-server
+  template:                   
+    metadata:
+      labels:                 
+        app: teacup-web-server
+    spec:                    
+      containers:
+      - name: teacup-web-server
+        image: obyerere1/tea-fe:v0.0.1
+        imagePullPolicy: IfNotPresent
+        ports:
+          - name: http
+            containerPort: 80
+---
+apiVersion: v1                
+kind: Service                 
+metadata:                     
+  name: teacup-web-server   
+  labels:                     
+    app: teacup-web-server
+spec:
+  type: NodePort
+  selector:
+    app: teacup-web-server
+  ports:
+     - protocol: TCP
+       port: 80
+       targetPort: 80
+        
+EOF
+
+
+sudo kubectl create -f myteacupweb.yml
