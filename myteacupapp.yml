@@ -2,20 +2,7 @@ sudo rm key.json
 sudo rm myteacupapp.yml
 
 sudo cat <<EOF >> key.json
- 
-{
-  "type": "service_account",
-  "project_id": "turnkey-mender-271118",
-  "private_key_id": "8e2eac87ef2252f257f07da26ecbda543fd10157",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCklHioEckZU5c0\ne1Ejlzflzc+ljhMEXrc3M52Gigm2Q+/eSZTJ/cnvn77JBT5A5AXeVxsc6+bJ8OcY\n04ElxbpnUeBOZXergPIkEPh/mecmPfFhpKg+o+yiadF6vRQ+fMoUqP8cOpkzyNU9\nNmv8wE4Ckkq2ms3SRAJ8rC+6fKsmkFb+YzygC+oQRYzgDEQwOc+QKYclv/MhEX0g\nI1p40v+IH+5qlcK65Orz7xs5pKZ3p5E288Vok0k82vqZG5tEatSDvXrbnq8KgrMz\npdQH6+oOQEK0LYeGjF8dB0fy+bE+w3c8efLPu8phQiyZ06sc7UhENVjX1hJi4wWc\nO+2twQ9PAgMBAAECggEAJRa0biO77vIwhAo6Scv9M9OCtOtki7qQjWcbW8Nl1uZO\newiX+EEyLccRJpoA4nzAec+lc4oR83ZPjf+z/gAmNrxz0Rb6tfKUHt6YMaFMPwj8\niaWiqKMmY593LrLHiiFzJN7ExubJuarLq0TFZysrKVcwcSBHu9fJu7DN/Le1ljXZ\nvq774zOmmMVpKoicDG6MiWmSbsgaKGENSkbtqDnDRfqv4F6HvK+b+DOd8paq/leZ\nA8wbFpXLmZ5I4iscCWxHBogM2Am8BpQd7vump9OrycesqlpvjQ25gHJpxH3MsSud\nu0vIO8dAxeOdmSQwmZy19gLCnG/avBmRByjUfQQm0QKBgQDoD8dVPzIVL/pGWYBZ\ntmfE9X9UMgD0QPBi8xErSEn/mQkrMz5CpqTKYWCoY9Dm1QBrZhKFht4c7/egLegY\nAAU5eIbKTupyqyB8RLwelWhel+5aB8Onvk6kmrG1g+QFPZobP+cLtxShFa4P4Aa/\ni9qh19HwpbbgmMCldV2oWeuBhwKBgQC1jqelZ0W4KhVD227fPjMpgrmpzXJmQxm9\nv2FUqYQ0/x+JLqr+k3SwTlaqnHoWzk5Xavk5UU2wLz/n7CVh35i29Eeriec/XapH\nYZCInUUq9UxEioZNjCQH0GOS51Fq6tkN71bidWEbTfa/0maI+gFOej4hBUWRb+zL\nkqsbrXAV+QKBgQDbEtI+Itu37sQZl7K4fp9168DZjh8idw+4ifjiYGsjNajXNJgJ\nOeKF/+nM7fYvhFPSD9laXtjefpfJiqz5w0MrXyH4aQmhWPXg+s6RHMEb09g6++t0\nNw9tC3DKiAlB/Ua3hNssTxjVfW8GI5qbR38NnH3f7cE4RFxRlvvky4atjwKBgCDT\n/Igx1i9onJO6d5+yFXoqAvwrA8Zt15expR2z0Q3sG32ojI6fhvfiElWjGYhKIWw5\nEXtFsjBrOrjqwA+kaG6cWOExfDi+7O0fPQ0Wss0DsZirG4GmF1W6XmbPoK8ea8TT\nQ/iKlNZlEHq6xoN6AQZ5oAZEd8HGZSCiEoJcp+mxAoGBAKHddO18eBUpJ/mnomqK\nnvSB8Q7TCM6jdGtO7Ir5HODEKM8gsIxQLO8IEfOCrK6PedhxVRys4M63EtzftGFb\n5Z/Z/KxZb3/Nija/qao5CEOQYwlWravXv90hF/9u3JxsLsdQ2YVDGA3u+u5KE3Op\nOm8ktrA0WezTSIfo0Hd/KGPw\n-----END PRIVATE KEY-----\n",
-  "client_email": "obyerere@turnkey-mender-271118.iam.gserviceaccount.com",
-  "client_id": "108711862256115001120",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/obyerere%40turnkey-mender-271118.iam.gserviceaccount.com"
-}
-
+# insert key.json
 EOF
 
 sudo ls -la 
